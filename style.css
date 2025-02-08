@@ -4,19 +4,20 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-}
-
-body {
+  }
+  
+  /* Marble Black Background */
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #2a2a72, #009ffd);
+    background: #1c1c1c;
     color: #fff;
-}
-
-/* Container */
-.container {
+  }
+  
+  /* Container */
+  .container {
     background: rgba(255, 255, 255, 0.1);
     padding: 25px;
     border-radius: 15px;
@@ -25,42 +26,43 @@ body {
     width: 90%;
     max-width: 400px;
     backdrop-filter: blur(10px);
-}
-
-/* Title */
-.title h1 {
+  }
+  
+  /* Title */
+  .title h1 {
     font-size: 28px;
     margin-bottom: 10px;
-}
-
-/* Developer Info */
-.developer-info {
+  }
+  
+  /* Developer Info */
+  .developer-info {
     font-size: 14px;
     margin-bottom: 15px;
-}
-
-.developer-info a {
+  }
+  
+  .developer-info a {
     color: #ffdd57;
     text-decoration: none;
     font-weight: bold;
-}
-
-.developer-info a:hover {
+  }
+  
+  .developer-info a:hover {
     text-decoration: underline;
-}
-
-/* Form */
-form {
+  }
+  
+  /* Form */
+  form {
     margin-top: 10px;
-}
-
-label {
+  }
+  
+  label {
     display: block;
     font-size: 16px;
     margin-bottom: 8px;
-}
-
-input[type="text"] {
+  }
+  
+  input[type="text"],
+  input[type="tel"] {
     width: 100%;
     padding: 12px;
     border-radius: 8px;
@@ -69,42 +71,91 @@ input[type="text"] {
     text-align: center;
     outline: none;
     transition: 0.3s;
-}
-
-input[type="text"]:focus {
+  }
+  
+  /* Input Focus: glowing effect on focus */
+  input[type="text"]:focus,
+  input[type="tel"]:focus {
     border-color: #ffdd57;
     box-shadow: 0 0 10px rgba(255, 221, 87, 0.6);
-}
-
-/* Button */
-button {
-    width: 100%;
+  }
+  
+  /* Glowing Effect Class (applied after successful validation) */
+  .glow {
+    box-shadow: 0 0 20px 5px rgba(255, 221, 87, 0.8);
+  }
+  
+  /* Common Button Styles */
+  button {
     padding: 12px;
     margin-top: 10px;
-    background: #ffdd57;
-    color: #333;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s ease;
-}
-
-button:hover {
+  }
+  
+  /* Validate Button */
+  button[type="submit"] {
+    width: 100%;
+    background: #ffdd57;
+    color: #333;
+  }
+  
+  button[type="submit"]:hover {
     background: #ffc107;
     transform: scale(1.05);
-}
-
-/* Result */
-#result {
+    box-shadow: 0 0 20px 5px rgba(255, 221, 87, 0.8);
+  }
+  
+  /* Button Group: to display Copy and Reset buttons side by side */
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .button-group button {
+    flex: 1;
+  }
+  
+  /* Copy Button Styling */
+  #copyBtn {
+    background: #27ae60; /* Green color */
+    color: #fff;
+  }
+  
+  #copyBtn:hover {
+    background: #1e8449;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 5px rgba(39, 174, 96, 0.8);
+  }
+  
+  /* Reset Button Styling */
+  #resetBtn {
+    background: #e74c3c; /* Red color */
+    color: #fff;
+  }
+  
+  #resetBtn:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 5px rgba(231, 76, 60, 0.8);
+  }
+  
+  /* Result */
+  #result {
     margin-top: 15px;
     font-size: 18px;
     font-weight: bold;
-}
-
-/* Card Type */
-#card-type {
+  }
+  
+  /* Card Type */
+  #card-type {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
-}
+  }
+
+  
